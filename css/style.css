@@ -114,7 +114,7 @@
 
 @media (max-width: 991.98px) {
     .sticky-top.navbar-dark {
-        position: relative;
+        position: fixed;
     }
 
     .navbar-dark .navbar-collapse {
