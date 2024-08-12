@@ -480,3 +480,11 @@
     padding-right: 0;
     border-right: none;
 }
+
+
+/* Apply the animation */
+.moving-image {
+    position: fixed;
+    z-index: 9999;
+
+}
