@@ -25,9 +25,9 @@
             display: flex;
             justify-content: center;
             gap: 20px;
-            margin-bottom: 20px;
+            margin-top: 20px;
         }
-        .logos img {
+        .logos a img {
             width: 120px;
             height: auto;
         }
@@ -53,20 +53,41 @@
         .cta-button:hover {
             background-color: #d32f2f;
         }
+        .dishes {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff3d00;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Order from Swiggy or Zomato & Get <span style="color: #ff3d00;">20% Instant Discount!</span></h1>
+        <a href="#" class="cta-button">Order Now</a>
         <div class="logos">
-            <img src="img/swiggy-logo.png" alt="Swiggy Logo">
-            <img src="img/zomato-logo.png" alt="Zomato Logo">
+            <a href="https://www.swiggy.com/direct/brand/575022?source=swiggy-direct&subSource=generic" target="_blank">
+                <img src="img/swiggy-logo.png" alt="Swiggy Logo">
+            </a>
+            <a href="https://link.zomato.com/xqzv/rshare?id=8974551730563471" target="_blank">
+                <img src="img/zomato-logo.png" alt="Zomato Logo">
+            </a>
         </div>
         <p>Scan the QR code below to order now and enjoy a delicious meal with an exclusive discount!</p>
         <div class="qr-code">
             <img src="qr-code.png" alt="Scan QR Code">
         </div>
-        <a href="#" class="cta-button">Order Now</a>
+        <div class="dishes">
+            <p>Try our delicious South Indian dishes:</p>
+            <ul>
+                <li>Hyderabadi Chicken Biryani</li>
+                <li>Chettinad Mutton Curry</li>
+                <li>Masala Dosa</li>
+                <li>Idli with Sambar</li>
+                <li>Paneer Butter Masala</li>
+                <li>Filter Coffee</li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
