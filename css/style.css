@@ -212,21 +212,50 @@
 
 /*** Service ***/
 .service-item {
-    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
-    transition: .5s;
+    background: white;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    padding: 25px;
+}
+
+.service-icon {
+    font-size: 40px;
+    color: #ff3d00;
+    background: #ffe6e6;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    transition: 0.3s;
+}
+
+.service-content p {
+    color: #666;
+    font-size: 15px;
 }
 
 .service-item:hover {
-    background: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.service-item * {
-    transition: .5s;
+.service-item:hover .service-icon {
+    background: #ff3d00;
+    color: white;
 }
 
-.service-item:hover * {
-    color: var(--light) !important;
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #16213e;
+    letter-spacing: 1px;
 }
+
+
 
 
 /*** Food Menu ***/
