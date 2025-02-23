@@ -12,6 +12,7 @@
             background: linear-gradient(to right, #1a1a2e, #16213e);
             color: white;
             padding: 20px;
+            position: relative;
         }
         .container {
             max-width: 800px;
@@ -22,6 +23,7 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
             color: black;
             animation: fadeIn 1s ease-in-out;
+            position: relative;
         }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-10px); }
@@ -88,6 +90,22 @@
                 width: 90%;
             }
         }
+        /* Golden snake boat image position */
+        .snake-boat {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 200px;
+            opacity: 0.6;
+        }
+        /* Kerala food watermark */
+        .food-watermark {
+            position: absolute;
+            bottom: 50px;
+            left: 50px;
+            opacity: 0.2;
+            width: 200px;
+        }
     </style>
 </head>
 <body>
@@ -114,6 +132,12 @@
             </div>
         </div>
     </div>
+
+    <!-- Traditional Kerala food watermark -->
+    <img src="kerala-food.jpg" alt="Kerala Food" class="food-watermark">
+
+    <!-- Golden-edged Royal Snake Boat -->
+    <img src="royal-snake-boat.jpg" alt="Golden Snake Boat" class="snake-boat">
 
     <script>
         function payNow(amount, plan) {
