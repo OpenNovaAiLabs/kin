@@ -523,7 +523,12 @@
 }
 
 .bg-light {
-    background: #f8f9fa;
+    background: #faf8f5;
+}
+
+.section-title {
+    font-size: 18px;
+    letter-spacing: 1px;
 }
 
 .display-4 {
@@ -532,35 +537,29 @@
 }
 
 .text-primary {
-    color: #ff3d00 !important;
+    color: #d4a017 !important; /* Luxurious Gold */
 }
 
 .btn-primary {
-    background: #ff3d00;
+    background: #d4a017;
     border: none;
     transition: all 0.3s ease-in-out;
 }
 
 .btn-primary:hover {
-    background: #d32f2f;
+    background: #b88a12;
     transform: scale(1.05);
 }
 
-/* Image Styling */
-.rounded-4 {
+/* Image & Icon Styling */
+.position-relative img {
     border-radius: 15px;
 }
 
-.shadow-lg {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+.position-absolute {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-/* Animation Effects */
-.wow {
-    transition: all 0.3s ease-in-out;
-}
-
-.wow:hover {
-    transform: translateY(-5px);
-}
-
