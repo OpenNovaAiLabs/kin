@@ -4,7 +4,7 @@ body {
     background-color: #951f0f;
     font-family: 'Roboto', sans-serif;
     color: #f7c9a4;
-    height: 100vh;
+    min-height: 100vh; /* Changed from height to min-height */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,23 +12,22 @@ body {
   
   .container {
     text-align: center;
-    padding: 40px;
+    padding: 5%; /* Adjusted to make padding responsive */
   }
   
   .card {
     background: rgba(255, 255, 255, 0.05);
-    border: 2px solid #220000;
+    border: 2px solid #faff00; /* Fluorescent light yellow border */
     border-radius: 16px;
-    padding: 60px 30px;
+    padding: 60px 5%; /* Adjusted padding for responsiveness */
     box-shadow: 
       0 8px 32px rgba(31, 38, 135, 0.2),
-      0 0 10px #220000,
-      0 0 20px #220000;
+      0 0 10px #faff00,
+      0 0 20px #faff00; /* Glowing effect */
     backdrop-filter: blur(6px);
-    max-width: 500px;
+    max-width: 90%; /* Makes the card responsive */
     margin: auto;
   }
-  
   
   .logo {
     width: 150px;
@@ -72,7 +71,6 @@ body {
     background-color: #1da851;
   }
   
-  
   .note {
     margin-top: 15px;
     font-size: 0.95em;
@@ -94,5 +92,16 @@ body {
   
   .footer a:hover {
     text-decoration: underline;
+  }
+  
+  /* Responsive Styles */
+  @media (min-width: 768px) {
+    .card {
+      padding: 80px 40px; /* Increased padding for larger screens */
+      max-width: 600px; /* Make card wider on larger screens */
+    }
+    .whatsapp-btn {
+      font-size: 1.2em; /* Increase font size on larger screens */
+    }
   }
   
