@@ -111,10 +111,12 @@
             margin-bottom: 30px;
         }
         
-        /* Media query to switch to a row layout on larger screens */
-        @media (min-width: 768px) {
-             .order-buttons {
+         @media (min-width: 768px) {
+            .order-buttons {
                 flex-direction: row;
+            }
+            .order-btn {
+                width: auto; /* Reset to auto width for row layout */
             }
 
         .order-btn {
@@ -129,6 +131,7 @@
             transition: background-color 0.3s ease;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             color: #fff; /* Kept text color white for readability on the buttons */
+            width: 100%;
         }
 
         .order-btn:hover {
