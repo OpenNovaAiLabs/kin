@@ -6,9 +6,25 @@
     <title>Kycho.in | Dishing Up Deliciousness</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
+        /*
+         * CSS based on the Kycho Branding PDF with a custom color swap
+         *
+         * Color Palette:
+         * Background: #F6E2E1 (Light grayish red, as requested)
+         * Foreground: #C72424 (Brighter red)
+         * Accent: #FFBB18 (Vibrant yellow, for contrast)
+         * Text: #fff (White, for contrast)
+         *
+         * Typography:
+         * Font Family: Montserrat
+         * Weights: Regular (400), Medium (500), Bold (700), Black (900)
+         *
+         * Brand Personality: Vibrant, Minimal, Quirky
+         */
+
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #F6E2E1;
+            background-color: #F6E2E1; /* Light grayish red background */
             color: #272222;
             display: flex;
             justify-content: center;
@@ -17,6 +33,7 @@
             margin: 0;
             padding: 20px;
             box-sizing: border-box;
+            line-height: 1.6;
         }
 
         .container {
@@ -25,37 +42,66 @@
         }
 
         .card {
-            background-color: #fff;
+            background-color: #C72424; /* Brighter red foreground */
             padding: 40px;
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             text-align: center;
+            color: #fff; /* Changed text color to white for readability on the red foreground */
         }
 
         .logo {
             width: 150px;
             margin-bottom: 20px;
+            /* The logo image from the branding PDF (Page 2, Image 1) */
         }
 
         .tagline {
             font-size: 2.5em;
-            font-weight: 900;
-            color: #FFBB18;
+            font-weight: 900; /* Montserrat Black */
+            color: #FFBB18; /* Vibrant yellow for contrast on light background */
             margin-top: 0;
             margin-bottom: 10px;
         }
 
         .intro-text {
-            font-weight: 500;
+            font-weight: 500; /* Montserrat Medium */
             font-size: 1.1em;
             line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .social-media-container {
+            margin: 30px 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        
+        @media (min-width: 480px) {
+            .social-media-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .social-post {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .social-post-image {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         .order-prompt {
-            font-weight: 700;
+            font-weight: 700; /* Montserrat Bold */
             font-size: 1.2em;
             margin-top: 30px;
             margin-bottom: 15px;
+            color: #fff; /* Changed text color to white for readability */
         }
 
         .order-buttons {
@@ -72,10 +118,28 @@
             padding: 12px 25px;
             border-radius: 5px;
             text-decoration: none;
-            font-weight: 700;
+            font-weight: 700; /* Montserrat Bold */
             font-size: 1em;
             transition: background-color 0.3s ease;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            color: #fff; /* Kept text color white for readability on the buttons */
+        }
+
+        .order-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366;
+        }
+
+        .swiggy-btn {
+            background-color: #FC8019;
+        }
+
+        .zomato-btn {
+            background-color: #E23744;
         }
 
         .icon {
@@ -84,44 +148,18 @@
             margin-right: 10px;
         }
 
-        .whatsapp-btn {
-            background-color: #25D366;
-            color: #fff;
-        }
-
-        .whatsapp-btn:hover {
-            background-color: #128C7E;
-        }
-
-        .swiggy-btn {
-            background-color: #FC8019;
-            color: #fff;
-        }
-
-        .swiggy-btn:hover {
-            background-color: #e06d15;
-        }
-
-        .zomato-btn {
-            background-color: #E23744;
-            color: #fff;
-        }
-
-        .zomato-btn:hover {
-            background-color: #c92f39;
-        }
-
         .footer {
             font-size: 0.9em;
             line-height: 1.8;
-            color: #555;
+            color: #272222; /* Changed footer text color to dark gray */
             margin-top: 30px;
+            font-weight: 700; /* Made footer text bold */
         }
 
         .footer a {
-            color: #272222;
+            color: #272222; /* Changed link color to dark gray */
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 700; /* Made link text bold */
         }
 
         .footer a:hover {
@@ -132,9 +170,18 @@
 <body>
     <div class="container">
         <div class="card">
-            <img src="img/kycho_logo.png" alt="Kycho Logo" class="logo" />
-            <h1 class="tagline">Dishing Up Deliciousness</h1>
-            <p class="intro-text">Kycho, a cloud kitchen in Bangalore, delivers authentic Kerala cuisine. The branding is simple, clean, and minimal, with a quirky and playful touch.</p>
+            <img src="img/logo_orange.png" alt="Kycho Logo" class="logo" />
+            <h1 class="tagline">DISHING UP DELICIOUSNESS</h1>
+            <p class="intro-text">Kycho (a slang in malayalam which means "have you eaten?"), is a cloud kitchen based in Bangalore delivering authentic Kerala cuisine. The idea for their branding was to keep things simple, clean and minimal and yet add some quirkiness and playfulness to the same.</p>
+
+            <div class="social-media-container">
+                <div class="social-post">
+                    <img src="img/social_media_1.png" alt="Yummilicious Biryani" class="social-post-image">
+                </div>
+                <div class="social-post">
+                    <img src="img/social_media_2.png" alt="Craving for something sweet" class="social-post-image">
+                </div>
+            </div>
             
             <p class="order-prompt">Place your order now via:</p>
 
