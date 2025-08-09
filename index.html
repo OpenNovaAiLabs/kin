@@ -180,6 +180,30 @@
                 font-size: 0.9em;
             }
         }
+         @keyframes popUpAndFade {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* General style for the spice elements */
+        .spice {
+            position: fixed;
+            bottom: -50px; /* Start below the viewport */
+            font-size: 3rem;
+            animation-name: popUpAndFade;
+            animation-timing-function: ease-out;
+            pointer-events: none; /* Allows clicks to pass through to elements beneath */
+            z-index: 9999; /* Ensure the spices are on top of other content */
+        }
     </style>
 </head>
 <body>
