@@ -237,5 +237,42 @@
             </p>
         </div>
     </div>
+    <script>
+        // JavaScript to create and animate the spices
+        window.onload = function() {
+            const spices = ['🌶️', '🫚', '🧄', '🧅', '🫙', '🌿', '🥥', '🍚'];
+            const numberOfSpices = 30;
+            const animationDuration = 5; // seconds
+            const container = document.createElement('div');
+            container.classList.add('spice-container');
+            document.body.appendChild(container);
+
+            for (let i = 0; i < numberOfSpices; i++) {
+                const spiceElement = document.createElement('span');
+                const randomSpice = spices[Math.floor(Math.random() * spices.length)];
+                spiceElement.textContent = randomSpice;
+                spiceElement.classList.add('spice');
+
+                // Randomize animation properties for a more natural effect
+                const randomDuration = animationDuration + Math.random() * 5;
+                const randomDelay = Math.random() * 2;
+                const randomLeft = Math.random() * 100;
+                const randomSize = 2 + Math.random() * 2;
+                
+                spiceElement.style.left = `${randomLeft}vw`;
+                spiceElement.style.fontSize = `${randomSize}rem`;
+                spiceElement.style.animationDuration = `${randomDuration}s`;
+                spiceElement.style.animationDelay = `${randomDelay}s`;
+                spiceElement.style.animationIterationCount = '1';
+
+                container.appendChild(spiceElement);
+            }
+
+            // Clean up the elements after the animation is finished
+            setTimeout(() => {
+                container.remove();
+            }, (animationDuration + 5) * 1000);
+        };
+    </script>
 </body>
 </html>
